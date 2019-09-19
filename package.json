@@ -5,8 +5,8 @@
   "main": "tcprelay.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node server.js",
-    "local": "node local.js",
+    "server": "node server.js -s 0.0.0.0 -m aes-256-cfb -k password -p 8443",
+    "local": "node local.js -s 172.21.65.57 -l 1080 -m aes-256-cfb -k password -p 8443",
     "start": "node server.js"
   },
   "repository": {
